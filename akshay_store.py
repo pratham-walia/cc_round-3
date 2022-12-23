@@ -7,7 +7,6 @@ class admin:
     
     types = ["toiletries",'food','electronics','sports']
     discounts = {"toiletries":0.1,"food":0.05,"electronics":0.2,"sports":0.25}
-    profit = {"toiletries":0.25,"food":15,"electronics":30,"sports":35}
 
     def __init__(self,type_of_item,name,discount):
         self.name = name
@@ -71,7 +70,7 @@ print()
 if type == "admin":
 
     print()
-    print("hey you can change the discounts or the price of any of the items in the store")
+    print("hey you can change the discounts any of the items in the store")
 
     while 1==1:
         print()
@@ -114,6 +113,31 @@ if type == "admin":
     print("the discounts as per the item types are-->")
     for key, value in admin.discounts.items():
         print(key, ' : ', float(value)*100,"%")
+    print()
+    print("The profits earned per item are-->")
+    print()
+    print("the profits earned per item are as follows-->")
+    print()
+    profit = {"toiletries":0.25,"food":0.15,"electronics":0.30,"sports":0.35}
+    print("profit structure of toiletries: ")
+    print()
+    for key,value in admin.toiletries.items():
+            print (key,":",value*profit["toiletries"])
+    print()
+    print("profit structure of food: ")
+    print()
+    for key,value in admin.food.items():
+            print (key,":",value*profit["food"])
+    print()
+    print("profit structure of electronics: ")
+    print()
+    for key,value in admin.electronics.items():
+            print (key,":",value*profit["electronics"])
+    print()
+    print("profit structure of sports: ")
+    print()
+    for key,value in admin.sports.items():
+            print (key,":",value*profit["sports"])
     print()
 
 elif type == "customer":
